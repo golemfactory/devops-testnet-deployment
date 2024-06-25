@@ -1,0 +1,626 @@
+services:
+  provider0:
+    image: golemfactory/provider:0.15.2
+    network_mode: "host"
+    privileged: true
+    command: [ "golemsp", "run" ]
+    stdin_open: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+          cpus: "3.0"
+    volumes:
+      - /root/.local/share/ya-provider
+      - /root/.local/share/yagna
+    environment:
+      NODE_NAME: "testnet-c1-0"
+      YA_PAYMENT_NETWORK_GROUP: testnet
+      YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
+      YA_NET_BIND_URL: udp://0.0.0.0:11500
+      YAGNA_API_URL: http://127.0.0.1:7400
+      AUTO_CLEANUP_ACTIVITY: true
+      AUTO_CLEANUP_AGREEMENT: true
+      YA_RT_MEM: 4.5
+      SUBNET: public
+  provider1:
+    image: golemfactory/provider:0.15.2
+    network_mode: "host"
+    privileged: true
+    command: [ "golemsp", "run" ]
+    stdin_open: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+          cpus: "3.0"
+    volumes:
+      - /root/.local/share/ya-provider
+      - /root/.local/share/yagna
+    environment:
+      NODE_NAME: "testnet-c1-1"
+      YA_PAYMENT_NETWORK_GROUP: testnet
+      YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
+      YA_NET_BIND_URL: udp://0.0.0.0:11501
+      YAGNA_API_URL: http://127.0.0.1:7401
+      AUTO_CLEANUP_ACTIVITY: true
+      AUTO_CLEANUP_AGREEMENT: true
+      YA_RT_MEM: 4.5
+      SUBNET: public
+  provider2:
+    image: golemfactory/provider:0.15.2
+    network_mode: "host"
+    privileged: true
+    command: [ "golemsp", "run" ]
+    stdin_open: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+          cpus: "3.0"
+    volumes:
+      - /root/.local/share/ya-provider
+      - /root/.local/share/yagna
+    environment:
+      NODE_NAME: "testnet-c1-2"
+      YA_PAYMENT_NETWORK_GROUP: testnet
+      YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
+      YA_NET_BIND_URL: udp://0.0.0.0:11502
+      YAGNA_API_URL: http://127.0.0.1:7402
+      AUTO_CLEANUP_ACTIVITY: true
+      AUTO_CLEANUP_AGREEMENT: true
+      YA_RT_MEM: 4.5
+      SUBNET: public
+  provider3:
+    image: golemfactory/provider:0.15.2
+    network_mode: "host"
+    privileged: true
+    command: [ "golemsp", "run" ]
+    stdin_open: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+          cpus: "3.0"
+    volumes:
+      - /root/.local/share/ya-provider
+      - /root/.local/share/yagna
+    environment:
+      NODE_NAME: "testnet-c1-3"
+      YA_PAYMENT_NETWORK_GROUP: testnet
+      YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
+      YA_NET_BIND_URL: udp://0.0.0.0:11503
+      YAGNA_API_URL: http://127.0.0.1:7403
+      AUTO_CLEANUP_ACTIVITY: true
+      AUTO_CLEANUP_AGREEMENT: true
+      YA_RT_MEM: 4.5
+      SUBNET: public
+  provider4:
+    image: golemfactory/provider:0.15.2
+    network_mode: "host"
+    privileged: true
+    command: [ "golemsp", "run" ]
+    stdin_open: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+          cpus: "3.0"
+    volumes:
+      - /root/.local/share/ya-provider
+      - /root/.local/share/yagna
+    environment:
+      NODE_NAME: "testnet-c1-4"
+      YA_PAYMENT_NETWORK_GROUP: testnet
+      YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
+      YA_NET_BIND_URL: udp://0.0.0.0:11504
+      YAGNA_API_URL: http://127.0.0.1:7404
+      AUTO_CLEANUP_ACTIVITY: true
+      AUTO_CLEANUP_AGREEMENT: true
+      YA_RT_MEM: 4.5
+      SUBNET: public
+  provider5:
+    image: golemfactory/provider:0.15.2
+    network_mode: "host"
+    privileged: true
+    command: [ "golemsp", "run" ]
+    stdin_open: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+          cpus: "3.0"
+    volumes:
+      - /root/.local/share/ya-provider
+      - /root/.local/share/yagna
+    environment:
+      NODE_NAME: "testnet-c1-5"
+      YA_PAYMENT_NETWORK_GROUP: testnet
+      YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
+      YA_NET_BIND_URL: udp://0.0.0.0:11505
+      YAGNA_API_URL: http://127.0.0.1:7405
+      AUTO_CLEANUP_ACTIVITY: true
+      AUTO_CLEANUP_AGREEMENT: true
+      YA_RT_MEM: 4.5
+      SUBNET: public
+  provider6:
+    image: golemfactory/provider:0.15.2
+    network_mode: "host"
+    privileged: true
+    command: [ "golemsp", "run" ]
+    stdin_open: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+          cpus: "3.0"
+    volumes:
+      - /root/.local/share/ya-provider
+      - /root/.local/share/yagna
+    environment:
+      NODE_NAME: "testnet-c1-6"
+      YA_PAYMENT_NETWORK_GROUP: testnet
+      YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
+      YA_NET_BIND_URL: udp://0.0.0.0:11506
+      YAGNA_API_URL: http://127.0.0.1:7406
+      AUTO_CLEANUP_ACTIVITY: true
+      AUTO_CLEANUP_AGREEMENT: true
+      YA_RT_MEM: 4.5
+      SUBNET: public
+  provider7:
+    image: golemfactory/provider:0.15.2
+    network_mode: "host"
+    privileged: true
+    command: [ "golemsp", "run" ]
+    stdin_open: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+          cpus: "3.0"
+    volumes:
+      - /root/.local/share/ya-provider
+      - /root/.local/share/yagna
+    environment:
+      NODE_NAME: "testnet-c1-7"
+      YA_PAYMENT_NETWORK_GROUP: testnet
+      YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
+      YA_NET_BIND_URL: udp://0.0.0.0:11507
+      YAGNA_API_URL: http://127.0.0.1:7407
+      AUTO_CLEANUP_ACTIVITY: true
+      AUTO_CLEANUP_AGREEMENT: true
+      YA_RT_MEM: 4.5
+      SUBNET: public
+  provider8:
+    image: golemfactory/provider:0.15.2
+    network_mode: "host"
+    privileged: true
+    command: [ "golemsp", "run" ]
+    stdin_open: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+          cpus: "3.0"
+    volumes:
+      - /root/.local/share/ya-provider
+      - /root/.local/share/yagna
+    environment:
+      NODE_NAME: "testnet-c1-8"
+      YA_PAYMENT_NETWORK_GROUP: testnet
+      YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
+      YA_NET_BIND_URL: udp://0.0.0.0:11508
+      YAGNA_API_URL: http://127.0.0.1:7408
+      AUTO_CLEANUP_ACTIVITY: true
+      AUTO_CLEANUP_AGREEMENT: true
+      YA_RT_MEM: 4.5
+      SUBNET: public
+  provider9:
+    image: golemfactory/provider:0.15.2
+    network_mode: "host"
+    privileged: true
+    command: [ "golemsp", "run" ]
+    stdin_open: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+          cpus: "3.0"
+    volumes:
+      - /root/.local/share/ya-provider
+      - /root/.local/share/yagna
+    environment:
+      NODE_NAME: "testnet-c1-9"
+      YA_PAYMENT_NETWORK_GROUP: testnet
+      YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
+      YA_NET_BIND_URL: udp://0.0.0.0:11509
+      YAGNA_API_URL: http://127.0.0.1:7409
+      AUTO_CLEANUP_ACTIVITY: true
+      AUTO_CLEANUP_AGREEMENT: true
+      YA_RT_MEM: 4.5
+      SUBNET: public
+  provider10:
+    image: golemfactory/provider:0.15.2
+    network_mode: "host"
+    privileged: true
+    command: [ "golemsp", "run" ]
+    stdin_open: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+          cpus: "3.0"
+    volumes:
+      - /root/.local/share/ya-provider
+      - /root/.local/share/yagna
+    environment:
+      NODE_NAME: "testnet-c1-10"
+      YA_PAYMENT_NETWORK_GROUP: testnet
+      YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
+      YA_NET_BIND_URL: udp://0.0.0.0:11510
+      YAGNA_API_URL: http://127.0.0.1:7410
+      AUTO_CLEANUP_ACTIVITY: true
+      AUTO_CLEANUP_AGREEMENT: true
+      YA_RT_MEM: 4.5
+      SUBNET: public
+  provider11:
+    image: golemfactory/provider:0.15.2
+    network_mode: "host"
+    privileged: true
+    command: [ "golemsp", "run" ]
+    stdin_open: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+          cpus: "3.0"
+    volumes:
+      - /root/.local/share/ya-provider
+      - /root/.local/share/yagna
+    environment:
+      NODE_NAME: "testnet-c1-11"
+      YA_PAYMENT_NETWORK_GROUP: testnet
+      YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
+      YA_NET_BIND_URL: udp://0.0.0.0:11511
+      YAGNA_API_URL: http://127.0.0.1:7411
+      AUTO_CLEANUP_ACTIVITY: true
+      AUTO_CLEANUP_AGREEMENT: true
+      YA_RT_MEM: 4.5
+      SUBNET: public
+  provider12:
+    image: golemfactory/provider:0.15.2
+    network_mode: "host"
+    privileged: true
+    command: [ "golemsp", "run" ]
+    stdin_open: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+          cpus: "3.0"
+    volumes:
+      - /root/.local/share/ya-provider
+      - /root/.local/share/yagna
+    environment:
+      NODE_NAME: "testnet-c1-12"
+      YA_PAYMENT_NETWORK_GROUP: testnet
+      YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
+      YA_NET_BIND_URL: udp://0.0.0.0:11512
+      YAGNA_API_URL: http://127.0.0.1:7412
+      AUTO_CLEANUP_ACTIVITY: true
+      AUTO_CLEANUP_AGREEMENT: true
+      YA_RT_MEM: 4.5
+      SUBNET: public
+  provider13:
+    image: golemfactory/provider:0.15.2
+    network_mode: "host"
+    privileged: true
+    command: [ "golemsp", "run" ]
+    stdin_open: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+          cpus: "3.0"
+    volumes:
+      - /root/.local/share/ya-provider
+      - /root/.local/share/yagna
+    environment:
+      NODE_NAME: "testnet-c1-13"
+      YA_PAYMENT_NETWORK_GROUP: testnet
+      YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
+      YA_NET_BIND_URL: udp://0.0.0.0:11513
+      YAGNA_API_URL: http://127.0.0.1:7413
+      AUTO_CLEANUP_ACTIVITY: true
+      AUTO_CLEANUP_AGREEMENT: true
+      YA_RT_MEM: 4.5
+      SUBNET: public
+  provider14:
+    image: golemfactory/provider:0.15.2
+    network_mode: "host"
+    privileged: true
+    command: [ "golemsp", "run" ]
+    stdin_open: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+          cpus: "3.0"
+    volumes:
+      - /root/.local/share/ya-provider
+      - /root/.local/share/yagna
+    environment:
+      NODE_NAME: "testnet-c1-14"
+      YA_PAYMENT_NETWORK_GROUP: testnet
+      YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
+      YA_NET_BIND_URL: udp://0.0.0.0:11514
+      YAGNA_API_URL: http://127.0.0.1:7414
+      AUTO_CLEANUP_ACTIVITY: true
+      AUTO_CLEANUP_AGREEMENT: true
+      YA_RT_MEM: 4.5
+      SUBNET: public
+  provider15:
+    image: golemfactory/provider:0.15.2
+    network_mode: "host"
+    privileged: true
+    command: [ "golemsp", "run" ]
+    stdin_open: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+          cpus: "3.0"
+    volumes:
+      - /root/.local/share/ya-provider
+      - /root/.local/share/yagna
+    environment:
+      NODE_NAME: "testnet-c1-15"
+      YA_PAYMENT_NETWORK_GROUP: testnet
+      YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
+      YA_NET_BIND_URL: udp://0.0.0.0:11515
+      YAGNA_API_URL: http://127.0.0.1:7415
+      AUTO_CLEANUP_ACTIVITY: true
+      AUTO_CLEANUP_AGREEMENT: true
+      YA_RT_MEM: 4.5
+      SUBNET: public
+  provider16:
+    image: golemfactory/provider:0.15.2
+    network_mode: "host"
+    privileged: true
+    command: [ "golemsp", "run" ]
+    stdin_open: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+          cpus: "3.0"
+    volumes:
+      - /root/.local/share/ya-provider
+      - /root/.local/share/yagna
+    environment:
+      NODE_NAME: "testnet-c1-16"
+      YA_PAYMENT_NETWORK_GROUP: testnet
+      YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
+      YA_NET_BIND_URL: udp://0.0.0.0:11516
+      YAGNA_API_URL: http://127.0.0.1:7416
+      AUTO_CLEANUP_ACTIVITY: true
+      AUTO_CLEANUP_AGREEMENT: true
+      YA_RT_MEM: 4.5
+      SUBNET: public
+  provider17:
+    image: golemfactory/provider:0.15.2
+    network_mode: "host"
+    privileged: true
+    command: [ "golemsp", "run" ]
+    stdin_open: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+          cpus: "3.0"
+    volumes:
+      - /root/.local/share/ya-provider
+      - /root/.local/share/yagna
+    environment:
+      NODE_NAME: "testnet-c1-17"
+      YA_PAYMENT_NETWORK_GROUP: testnet
+      YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
+      YA_NET_BIND_URL: udp://0.0.0.0:11517
+      YAGNA_API_URL: http://127.0.0.1:7417
+      AUTO_CLEANUP_ACTIVITY: true
+      AUTO_CLEANUP_AGREEMENT: true
+      YA_RT_MEM: 4.5
+      SUBNET: public
+  provider18:
+    image: golemfactory/provider:0.15.2
+    network_mode: "host"
+    privileged: true
+    command: [ "golemsp", "run" ]
+    stdin_open: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+          cpus: "3.0"
+    volumes:
+      - /root/.local/share/ya-provider
+      - /root/.local/share/yagna
+    environment:
+      NODE_NAME: "testnet-c1-18"
+      YA_PAYMENT_NETWORK_GROUP: testnet
+      YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
+      YA_NET_BIND_URL: udp://0.0.0.0:11518
+      YAGNA_API_URL: http://127.0.0.1:7418
+      AUTO_CLEANUP_ACTIVITY: true
+      AUTO_CLEANUP_AGREEMENT: true
+      YA_RT_MEM: 4.5
+      SUBNET: public
+  provider19:
+    image: golemfactory/provider:0.15.2
+    network_mode: "host"
+    privileged: true
+    command: [ "golemsp", "run" ]
+    stdin_open: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+          cpus: "3.0"
+    volumes:
+      - /root/.local/share/ya-provider
+      - /root/.local/share/yagna
+    environment:
+      NODE_NAME: "testnet-c1-19"
+      YA_PAYMENT_NETWORK_GROUP: testnet
+      YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
+      YA_NET_BIND_URL: udp://0.0.0.0:11519
+      YAGNA_API_URL: http://127.0.0.1:7419
+      AUTO_CLEANUP_ACTIVITY: true
+      AUTO_CLEANUP_AGREEMENT: true
+      YA_RT_MEM: 4.5
+      SUBNET: public
+  provider20:
+    image: golemfactory/provider:0.15.2
+    network_mode: "host"
+    privileged: true
+    command: [ "golemsp", "run" ]
+    stdin_open: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+          cpus: "3.0"
+    volumes:
+      - /root/.local/share/ya-provider
+      - /root/.local/share/yagna
+    environment:
+      NODE_NAME: "testnet-c1-20"
+      YA_PAYMENT_NETWORK_GROUP: testnet
+      YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
+      YA_NET_BIND_URL: udp://0.0.0.0:11520
+      YAGNA_API_URL: http://127.0.0.1:7420
+      AUTO_CLEANUP_ACTIVITY: true
+      AUTO_CLEANUP_AGREEMENT: true
+      YA_RT_MEM: 4.5
+      SUBNET: public
+  provider21:
+    image: golemfactory/provider:0.15.2
+    network_mode: "host"
+    privileged: true
+    command: [ "golemsp", "run" ]
+    stdin_open: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+          cpus: "3.0"
+    volumes:
+      - /root/.local/share/ya-provider
+      - /root/.local/share/yagna
+    environment:
+      NODE_NAME: "testnet-c1-21"
+      YA_PAYMENT_NETWORK_GROUP: testnet
+      YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
+      YA_NET_BIND_URL: udp://0.0.0.0:11521
+      YAGNA_API_URL: http://127.0.0.1:7421
+      AUTO_CLEANUP_ACTIVITY: true
+      AUTO_CLEANUP_AGREEMENT: true
+      YA_RT_MEM: 4.5
+      SUBNET: public
+  provider22:
+    image: golemfactory/provider:0.15.2
+    network_mode: "host"
+    privileged: true
+    command: [ "golemsp", "run" ]
+    stdin_open: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+          cpus: "3.0"
+    volumes:
+      - /root/.local/share/ya-provider
+      - /root/.local/share/yagna
+    environment:
+      NODE_NAME: "testnet-c1-22"
+      YA_PAYMENT_NETWORK_GROUP: testnet
+      YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
+      YA_NET_BIND_URL: udp://0.0.0.0:11522
+      YAGNA_API_URL: http://127.0.0.1:7422
+      AUTO_CLEANUP_ACTIVITY: true
+      AUTO_CLEANUP_AGREEMENT: true
+      YA_RT_MEM: 4.5
+      SUBNET: public
+  provider23:
+    image: golemfactory/provider:0.15.2
+    network_mode: "host"
+    privileged: true
+    command: [ "golemsp", "run" ]
+    stdin_open: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+          cpus: "3.0"
+    volumes:
+      - /root/.local/share/ya-provider
+      - /root/.local/share/yagna
+    environment:
+      NODE_NAME: "testnet-c1-23"
+      YA_PAYMENT_NETWORK_GROUP: testnet
+      YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
+      YA_NET_BIND_URL: udp://0.0.0.0:11523
+      YAGNA_API_URL: http://127.0.0.1:7423
+      AUTO_CLEANUP_ACTIVITY: true
+      AUTO_CLEANUP_AGREEMENT: true
+      YA_RT_MEM: 4.5
+      SUBNET: public
+  provider24:
+    image: golemfactory/provider:0.15.2
+    network_mode: "host"
+    privileged: true
+    command: [ "golemsp", "run" ]
+    stdin_open: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+          cpus: "3.0"
+    volumes:
+      - /root/.local/share/ya-provider
+      - /root/.local/share/yagna
+    environment:
+      NODE_NAME: "testnet-c1-24"
+      YA_PAYMENT_NETWORK_GROUP: testnet
+      YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
+      YA_NET_BIND_URL: udp://0.0.0.0:11524
+      YAGNA_API_URL: http://127.0.0.1:7424
+      AUTO_CLEANUP_ACTIVITY: true
+      AUTO_CLEANUP_AGREEMENT: true
+      YA_RT_MEM: 4.5
+      SUBNET: public

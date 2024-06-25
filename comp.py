@@ -10,7 +10,7 @@ def service(idx):
     image: golemfactory/provider:{version}
     network_mode: "host"
     privileged: true
-    command: [ "golemsp", "run" ]
+    command: [ "golemsp", "run", "--no-interactive" ]
     stdin_open: true
     restart: unless-stopped
     deploy:
@@ -34,7 +34,7 @@ def service(idx):
 '''
 
 
-with open('compose.yaml', 'wt') as f:
+with open('docker-compose.yaml', 'wt') as f:
     f.write("services:\n")
 
     for idx in range(instances):

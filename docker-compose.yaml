@@ -3,7 +3,7 @@ services:
     image: golemfactory/provider:0.15.2
     network_mode: "host"
     privileged: true
-    command: [ "golemsp", "run" ]
+    command: [ "golemsp", "run", "--no-interactive" ]
     stdin_open: true
     restart: unless-stopped
     deploy:
@@ -28,7 +28,7 @@ services:
     image: golemfactory/provider:0.15.2
     network_mode: "host"
     privileged: true
-    command: [ "golemsp", "run" ]
+    command: [ "golemsp", "run", "--no-interactive" ]
     stdin_open: true
     restart: unless-stopped
     deploy:
@@ -53,7 +53,7 @@ services:
     image: golemfactory/provider:0.15.2
     network_mode: "host"
     privileged: true
-    command: [ "golemsp", "run" ]
+    command: [ "golemsp", "run", "--no-interactive" ]
     stdin_open: true
     restart: unless-stopped
     deploy:
@@ -78,7 +78,7 @@ services:
     image: golemfactory/provider:0.15.2
     network_mode: "host"
     privileged: true
-    command: [ "golemsp", "run" ]
+    command: [ "golemsp", "run", "--no-interactive" ]
     stdin_open: true
     restart: unless-stopped
     deploy:
@@ -103,7 +103,7 @@ services:
     image: golemfactory/provider:0.15.2
     network_mode: "host"
     privileged: true
-    command: [ "golemsp", "run" ]
+    command: [ "golemsp", "run", "--no-interactive" ]
     stdin_open: true
     restart: unless-stopped
     deploy:
@@ -128,7 +128,7 @@ services:
     image: golemfactory/provider:0.15.2
     network_mode: "host"
     privileged: true
-    command: [ "golemsp", "run" ]
+    command: [ "golemsp", "run", "--no-interactive" ]
     stdin_open: true
     restart: unless-stopped
     deploy:
@@ -153,7 +153,7 @@ services:
     image: golemfactory/provider:0.15.2
     network_mode: "host"
     privileged: true
-    command: [ "golemsp", "run" ]
+    command: [ "golemsp", "run", "--no-interactive" ]
     stdin_open: true
     restart: unless-stopped
     deploy:
@@ -178,7 +178,7 @@ services:
     image: golemfactory/provider:0.15.2
     network_mode: "host"
     privileged: true
-    command: [ "golemsp", "run" ]
+    command: [ "golemsp", "run", "--no-interactive" ]
     stdin_open: true
     restart: unless-stopped
     deploy:
@@ -203,7 +203,7 @@ services:
     image: golemfactory/provider:0.15.2
     network_mode: "host"
     privileged: true
-    command: [ "golemsp", "run" ]
+    command: [ "golemsp", "run", "--no-interactive" ]
     stdin_open: true
     restart: unless-stopped
     deploy:
@@ -228,7 +228,7 @@ services:
     image: golemfactory/provider:0.15.2
     network_mode: "host"
     privileged: true
-    command: [ "golemsp", "run" ]
+    command: [ "golemsp", "run", "--no-interactive" ]
     stdin_open: true
     restart: unless-stopped
     deploy:
@@ -253,7 +253,7 @@ services:
     image: golemfactory/provider:0.15.2
     network_mode: "host"
     privileged: true
-    command: [ "golemsp", "run" ]
+    command: [ "golemsp", "run", "--no-interactive" ]
     stdin_open: true
     restart: unless-stopped
     deploy:
@@ -278,7 +278,7 @@ services:
     image: golemfactory/provider:0.15.2
     network_mode: "host"
     privileged: true
-    command: [ "golemsp", "run" ]
+    command: [ "golemsp", "run", "--no-interactive" ]
     stdin_open: true
     restart: unless-stopped
     deploy:
@@ -303,7 +303,7 @@ services:
     image: golemfactory/provider:0.15.2
     network_mode: "host"
     privileged: true
-    command: [ "golemsp", "run" ]
+    command: [ "golemsp", "run", "--no-interactive" ]
     stdin_open: true
     restart: unless-stopped
     deploy:
@@ -328,7 +328,7 @@ services:
     image: golemfactory/provider:0.15.2
     network_mode: "host"
     privileged: true
-    command: [ "golemsp", "run" ]
+    command: [ "golemsp", "run", "--no-interactive" ]
     stdin_open: true
     restart: unless-stopped
     deploy:
@@ -353,7 +353,7 @@ services:
     image: golemfactory/provider:0.15.2
     network_mode: "host"
     privileged: true
-    command: [ "golemsp", "run" ]
+    command: [ "golemsp", "run", "--no-interactive" ]
     stdin_open: true
     restart: unless-stopped
     deploy:
@@ -378,7 +378,7 @@ services:
     image: golemfactory/provider:0.15.2
     network_mode: "host"
     privileged: true
-    command: [ "golemsp", "run" ]
+    command: [ "golemsp", "run", "--no-interactive" ]
     stdin_open: true
     restart: unless-stopped
     deploy:
@@ -403,7 +403,7 @@ services:
     image: golemfactory/provider:0.15.2
     network_mode: "host"
     privileged: true
-    command: [ "golemsp", "run" ]
+    command: [ "golemsp", "run", "--no-interactive" ]
     stdin_open: true
     restart: unless-stopped
     deploy:
@@ -428,7 +428,7 @@ services:
     image: golemfactory/provider:0.15.2
     network_mode: "host"
     privileged: true
-    command: [ "golemsp", "run" ]
+    command: [ "golemsp", "run", "--no-interactive" ]
     stdin_open: true
     restart: unless-stopped
     deploy:
@@ -453,7 +453,7 @@ services:
     image: golemfactory/provider:0.15.2
     network_mode: "host"
     privileged: true
-    command: [ "golemsp", "run" ]
+    command: [ "golemsp", "run", "--no-interactive" ]
     stdin_open: true
     restart: unless-stopped
     deploy:
@@ -478,7 +478,7 @@ services:
     image: golemfactory/provider:0.15.2
     network_mode: "host"
     privileged: true
-    command: [ "golemsp", "run" ]
+    command: [ "golemsp", "run", "--no-interactive" ]
     stdin_open: true
     restart: unless-stopped
     deploy:
@@ -503,7 +503,7 @@ services:
     image: golemfactory/provider:0.15.2
     network_mode: "host"
     privileged: true
-    command: [ "golemsp", "run" ]
+    command: [ "golemsp", "run", "--no-interactive" ]
     stdin_open: true
     restart: unless-stopped
     deploy:
@@ -528,7 +528,7 @@ services:
     image: golemfactory/provider:0.15.2
     network_mode: "host"
     privileged: true
-    command: [ "golemsp", "run" ]
+    command: [ "golemsp", "run", "--no-interactive" ]
     stdin_open: true
     restart: unless-stopped
     deploy:
@@ -553,7 +553,7 @@ services:
     image: golemfactory/provider:0.15.2
     network_mode: "host"
     privileged: true
-    command: [ "golemsp", "run" ]
+    command: [ "golemsp", "run", "--no-interactive" ]
     stdin_open: true
     restart: unless-stopped
     deploy:
@@ -578,7 +578,7 @@ services:
     image: golemfactory/provider:0.15.2
     network_mode: "host"
     privileged: true
-    command: [ "golemsp", "run" ]
+    command: [ "golemsp", "run", "--no-interactive" ]
     stdin_open: true
     restart: unless-stopped
     deploy:
@@ -603,7 +603,7 @@ services:
     image: golemfactory/provider:0.15.2
     network_mode: "host"
     privileged: true
-    command: [ "golemsp", "run" ]
+    command: [ "golemsp", "run", "--no-interactive" ]
     stdin_open: true
     restart: unless-stopped
     deploy:

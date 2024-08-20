@@ -1,6 +1,6 @@
 instances=25
 subnet="public"
-version="0.15.2"
+version="0.16.0-rc2"
 
 
 def service(idx):
@@ -23,6 +23,7 @@ def service(idx):
       - /root/.local/share/yagna
     environment:
       NODE_NAME: "testnet-c1-{idx}"
+      YA_NET_PUB_BROADCAST_SIZE: 150
       YA_PAYMENT_NETWORK_GROUP: testnet
       YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
       YA_NET_BIND_URL: udp://0.0.0.0:{port}

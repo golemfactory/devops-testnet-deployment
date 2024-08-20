@@ -1,6 +1,6 @@
 services:
   provider0:
-    image: golemfactory/provider:0.15.2
+    image: golemfactory/provider:0.16.0-rc2
     network_mode: "host"
     privileged: true
     command: [ "golemsp", "run", "--no-interactive" ]
@@ -16,6 +16,7 @@ services:
       - /root/.local/share/yagna
     environment:
       NODE_NAME: "testnet-c1-0"
+      YA_NET_PUB_BROADCAST_SIZE: 150
       YA_PAYMENT_NETWORK_GROUP: testnet
       YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
       YA_NET_BIND_URL: udp://0.0.0.0:11500
@@ -25,7 +26,7 @@ services:
       YA_RT_MEM: 4.5
       SUBNET: public
   provider1:
-    image: golemfactory/provider:0.15.2
+    image: golemfactory/provider:0.16.0-rc2
     network_mode: "host"
     privileged: true
     command: [ "golemsp", "run", "--no-interactive" ]
@@ -41,6 +42,7 @@ services:
       - /root/.local/share/yagna
     environment:
       NODE_NAME: "testnet-c1-1"
+      YA_NET_PUB_BROADCAST_SIZE: 150
       YA_PAYMENT_NETWORK_GROUP: testnet
       YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
       YA_NET_BIND_URL: udp://0.0.0.0:11501
@@ -50,7 +52,7 @@ services:
       YA_RT_MEM: 4.5
       SUBNET: public
   provider2:
-    image: golemfactory/provider:0.15.2
+    image: golemfactory/provider:0.16.0-rc2
     network_mode: "host"
     privileged: true
     command: [ "golemsp", "run", "--no-interactive" ]
@@ -66,6 +68,7 @@ services:
       - /root/.local/share/yagna
     environment:
       NODE_NAME: "testnet-c1-2"
+      YA_NET_PUB_BROADCAST_SIZE: 150
       YA_PAYMENT_NETWORK_GROUP: testnet
       YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
       YA_NET_BIND_URL: udp://0.0.0.0:11502
@@ -75,7 +78,7 @@ services:
       YA_RT_MEM: 4.5
       SUBNET: public
   provider3:
-    image: golemfactory/provider:0.15.2
+    image: golemfactory/provider:0.16.0-rc2
     network_mode: "host"
     privileged: true
     command: [ "golemsp", "run", "--no-interactive" ]
@@ -91,6 +94,7 @@ services:
       - /root/.local/share/yagna
     environment:
       NODE_NAME: "testnet-c1-3"
+      YA_NET_PUB_BROADCAST_SIZE: 150
       YA_PAYMENT_NETWORK_GROUP: testnet
       YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
       YA_NET_BIND_URL: udp://0.0.0.0:11503
@@ -100,7 +104,7 @@ services:
       YA_RT_MEM: 4.5
       SUBNET: public
   provider4:
-    image: golemfactory/provider:0.15.2
+    image: golemfactory/provider:0.16.0-rc2
     network_mode: "host"
     privileged: true
     command: [ "golemsp", "run", "--no-interactive" ]
@@ -116,6 +120,7 @@ services:
       - /root/.local/share/yagna
     environment:
       NODE_NAME: "testnet-c1-4"
+      YA_NET_PUB_BROADCAST_SIZE: 150
       YA_PAYMENT_NETWORK_GROUP: testnet
       YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
       YA_NET_BIND_URL: udp://0.0.0.0:11504
@@ -125,7 +130,7 @@ services:
       YA_RT_MEM: 4.5
       SUBNET: public
   provider5:
-    image: golemfactory/provider:0.15.2
+    image: golemfactory/provider:0.16.0-rc2
     network_mode: "host"
     privileged: true
     command: [ "golemsp", "run", "--no-interactive" ]
@@ -141,6 +146,7 @@ services:
       - /root/.local/share/yagna
     environment:
       NODE_NAME: "testnet-c1-5"
+      YA_NET_PUB_BROADCAST_SIZE: 150
       YA_PAYMENT_NETWORK_GROUP: testnet
       YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
       YA_NET_BIND_URL: udp://0.0.0.0:11505
@@ -150,7 +156,7 @@ services:
       YA_RT_MEM: 4.5
       SUBNET: public
   provider6:
-    image: golemfactory/provider:0.15.2
+    image: golemfactory/provider:0.16.0-rc2
     network_mode: "host"
     privileged: true
     command: [ "golemsp", "run", "--no-interactive" ]
@@ -166,6 +172,7 @@ services:
       - /root/.local/share/yagna
     environment:
       NODE_NAME: "testnet-c1-6"
+      YA_NET_PUB_BROADCAST_SIZE: 150
       YA_PAYMENT_NETWORK_GROUP: testnet
       YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
       YA_NET_BIND_URL: udp://0.0.0.0:11506
@@ -175,7 +182,7 @@ services:
       YA_RT_MEM: 4.5
       SUBNET: public
   provider7:
-    image: golemfactory/provider:0.15.2
+    image: golemfactory/provider:0.16.0-rc2
     network_mode: "host"
     privileged: true
     command: [ "golemsp", "run", "--no-interactive" ]
@@ -191,6 +198,7 @@ services:
       - /root/.local/share/yagna
     environment:
       NODE_NAME: "testnet-c1-7"
+      YA_NET_PUB_BROADCAST_SIZE: 150
       YA_PAYMENT_NETWORK_GROUP: testnet
       YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
       YA_NET_BIND_URL: udp://0.0.0.0:11507
@@ -200,7 +208,7 @@ services:
       YA_RT_MEM: 4.5
       SUBNET: public
   provider8:
-    image: golemfactory/provider:0.15.2
+    image: golemfactory/provider:0.16.0-rc2
     network_mode: "host"
     privileged: true
     command: [ "golemsp", "run", "--no-interactive" ]
@@ -216,6 +224,7 @@ services:
       - /root/.local/share/yagna
     environment:
       NODE_NAME: "testnet-c1-8"
+      YA_NET_PUB_BROADCAST_SIZE: 150
       YA_PAYMENT_NETWORK_GROUP: testnet
       YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
       YA_NET_BIND_URL: udp://0.0.0.0:11508
@@ -225,7 +234,7 @@ services:
       YA_RT_MEM: 4.5
       SUBNET: public
   provider9:
-    image: golemfactory/provider:0.15.2
+    image: golemfactory/provider:0.16.0-rc2
     network_mode: "host"
     privileged: true
     command: [ "golemsp", "run", "--no-interactive" ]
@@ -241,6 +250,7 @@ services:
       - /root/.local/share/yagna
     environment:
       NODE_NAME: "testnet-c1-9"
+      YA_NET_PUB_BROADCAST_SIZE: 150
       YA_PAYMENT_NETWORK_GROUP: testnet
       YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
       YA_NET_BIND_URL: udp://0.0.0.0:11509
@@ -250,7 +260,7 @@ services:
       YA_RT_MEM: 4.5
       SUBNET: public
   provider10:
-    image: golemfactory/provider:0.15.2
+    image: golemfactory/provider:0.16.0-rc2
     network_mode: "host"
     privileged: true
     command: [ "golemsp", "run", "--no-interactive" ]
@@ -266,6 +276,7 @@ services:
       - /root/.local/share/yagna
     environment:
       NODE_NAME: "testnet-c1-10"
+      YA_NET_PUB_BROADCAST_SIZE: 150
       YA_PAYMENT_NETWORK_GROUP: testnet
       YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
       YA_NET_BIND_URL: udp://0.0.0.0:11510
@@ -275,7 +286,7 @@ services:
       YA_RT_MEM: 4.5
       SUBNET: public
   provider11:
-    image: golemfactory/provider:0.15.2
+    image: golemfactory/provider:0.16.0-rc2
     network_mode: "host"
     privileged: true
     command: [ "golemsp", "run", "--no-interactive" ]
@@ -291,6 +302,7 @@ services:
       - /root/.local/share/yagna
     environment:
       NODE_NAME: "testnet-c1-11"
+      YA_NET_PUB_BROADCAST_SIZE: 150
       YA_PAYMENT_NETWORK_GROUP: testnet
       YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
       YA_NET_BIND_URL: udp://0.0.0.0:11511
@@ -300,7 +312,7 @@ services:
       YA_RT_MEM: 4.5
       SUBNET: public
   provider12:
-    image: golemfactory/provider:0.15.2
+    image: golemfactory/provider:0.16.0-rc2
     network_mode: "host"
     privileged: true
     command: [ "golemsp", "run", "--no-interactive" ]
@@ -316,6 +328,7 @@ services:
       - /root/.local/share/yagna
     environment:
       NODE_NAME: "testnet-c1-12"
+      YA_NET_PUB_BROADCAST_SIZE: 150
       YA_PAYMENT_NETWORK_GROUP: testnet
       YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
       YA_NET_BIND_URL: udp://0.0.0.0:11512
@@ -325,7 +338,7 @@ services:
       YA_RT_MEM: 4.5
       SUBNET: public
   provider13:
-    image: golemfactory/provider:0.15.2
+    image: golemfactory/provider:0.16.0-rc2
     network_mode: "host"
     privileged: true
     command: [ "golemsp", "run", "--no-interactive" ]
@@ -341,6 +354,7 @@ services:
       - /root/.local/share/yagna
     environment:
       NODE_NAME: "testnet-c1-13"
+      YA_NET_PUB_BROADCAST_SIZE: 150
       YA_PAYMENT_NETWORK_GROUP: testnet
       YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
       YA_NET_BIND_URL: udp://0.0.0.0:11513
@@ -350,7 +364,7 @@ services:
       YA_RT_MEM: 4.5
       SUBNET: public
   provider14:
-    image: golemfactory/provider:0.15.2
+    image: golemfactory/provider:0.16.0-rc2
     network_mode: "host"
     privileged: true
     command: [ "golemsp", "run", "--no-interactive" ]
@@ -366,6 +380,7 @@ services:
       - /root/.local/share/yagna
     environment:
       NODE_NAME: "testnet-c1-14"
+      YA_NET_PUB_BROADCAST_SIZE: 150
       YA_PAYMENT_NETWORK_GROUP: testnet
       YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
       YA_NET_BIND_URL: udp://0.0.0.0:11514
@@ -375,7 +390,7 @@ services:
       YA_RT_MEM: 4.5
       SUBNET: public
   provider15:
-    image: golemfactory/provider:0.15.2
+    image: golemfactory/provider:0.16.0-rc2
     network_mode: "host"
     privileged: true
     command: [ "golemsp", "run", "--no-interactive" ]
@@ -391,6 +406,7 @@ services:
       - /root/.local/share/yagna
     environment:
       NODE_NAME: "testnet-c1-15"
+      YA_NET_PUB_BROADCAST_SIZE: 150
       YA_PAYMENT_NETWORK_GROUP: testnet
       YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
       YA_NET_BIND_URL: udp://0.0.0.0:11515
@@ -400,7 +416,7 @@ services:
       YA_RT_MEM: 4.5
       SUBNET: public
   provider16:
-    image: golemfactory/provider:0.15.2
+    image: golemfactory/provider:0.16.0-rc2
     network_mode: "host"
     privileged: true
     command: [ "golemsp", "run", "--no-interactive" ]
@@ -416,6 +432,7 @@ services:
       - /root/.local/share/yagna
     environment:
       NODE_NAME: "testnet-c1-16"
+      YA_NET_PUB_BROADCAST_SIZE: 150
       YA_PAYMENT_NETWORK_GROUP: testnet
       YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
       YA_NET_BIND_URL: udp://0.0.0.0:11516
@@ -425,7 +442,7 @@ services:
       YA_RT_MEM: 4.5
       SUBNET: public
   provider17:
-    image: golemfactory/provider:0.15.2
+    image: golemfactory/provider:0.16.0-rc2
     network_mode: "host"
     privileged: true
     command: [ "golemsp", "run", "--no-interactive" ]
@@ -441,6 +458,7 @@ services:
       - /root/.local/share/yagna
     environment:
       NODE_NAME: "testnet-c1-17"
+      YA_NET_PUB_BROADCAST_SIZE: 150
       YA_PAYMENT_NETWORK_GROUP: testnet
       YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
       YA_NET_BIND_URL: udp://0.0.0.0:11517
@@ -450,7 +468,7 @@ services:
       YA_RT_MEM: 4.5
       SUBNET: public
   provider18:
-    image: golemfactory/provider:0.15.2
+    image: golemfactory/provider:0.16.0-rc2
     network_mode: "host"
     privileged: true
     command: [ "golemsp", "run", "--no-interactive" ]
@@ -466,6 +484,7 @@ services:
       - /root/.local/share/yagna
     environment:
       NODE_NAME: "testnet-c1-18"
+      YA_NET_PUB_BROADCAST_SIZE: 150
       YA_PAYMENT_NETWORK_GROUP: testnet
       YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
       YA_NET_BIND_URL: udp://0.0.0.0:11518
@@ -475,7 +494,7 @@ services:
       YA_RT_MEM: 4.5
       SUBNET: public
   provider19:
-    image: golemfactory/provider:0.15.2
+    image: golemfactory/provider:0.16.0-rc2
     network_mode: "host"
     privileged: true
     command: [ "golemsp", "run", "--no-interactive" ]
@@ -491,6 +510,7 @@ services:
       - /root/.local/share/yagna
     environment:
       NODE_NAME: "testnet-c1-19"
+      YA_NET_PUB_BROADCAST_SIZE: 150
       YA_PAYMENT_NETWORK_GROUP: testnet
       YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
       YA_NET_BIND_URL: udp://0.0.0.0:11519
@@ -500,7 +520,7 @@ services:
       YA_RT_MEM: 4.5
       SUBNET: public
   provider20:
-    image: golemfactory/provider:0.15.2
+    image: golemfactory/provider:0.16.0-rc2
     network_mode: "host"
     privileged: true
     command: [ "golemsp", "run", "--no-interactive" ]
@@ -516,6 +536,7 @@ services:
       - /root/.local/share/yagna
     environment:
       NODE_NAME: "testnet-c1-20"
+      YA_NET_PUB_BROADCAST_SIZE: 150
       YA_PAYMENT_NETWORK_GROUP: testnet
       YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
       YA_NET_BIND_URL: udp://0.0.0.0:11520
@@ -525,7 +546,7 @@ services:
       YA_RT_MEM: 4.5
       SUBNET: public
   provider21:
-    image: golemfactory/provider:0.15.2
+    image: golemfactory/provider:0.16.0-rc2
     network_mode: "host"
     privileged: true
     command: [ "golemsp", "run", "--no-interactive" ]
@@ -541,6 +562,7 @@ services:
       - /root/.local/share/yagna
     environment:
       NODE_NAME: "testnet-c1-21"
+      YA_NET_PUB_BROADCAST_SIZE: 150
       YA_PAYMENT_NETWORK_GROUP: testnet
       YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
       YA_NET_BIND_URL: udp://0.0.0.0:11521
@@ -550,7 +572,7 @@ services:
       YA_RT_MEM: 4.5
       SUBNET: public
   provider22:
-    image: golemfactory/provider:0.15.2
+    image: golemfactory/provider:0.16.0-rc2
     network_mode: "host"
     privileged: true
     command: [ "golemsp", "run", "--no-interactive" ]
@@ -566,6 +588,7 @@ services:
       - /root/.local/share/yagna
     environment:
       NODE_NAME: "testnet-c1-22"
+      YA_NET_PUB_BROADCAST_SIZE: 150
       YA_PAYMENT_NETWORK_GROUP: testnet
       YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
       YA_NET_BIND_URL: udp://0.0.0.0:11522
@@ -575,7 +598,7 @@ services:
       YA_RT_MEM: 4.5
       SUBNET: public
   provider23:
-    image: golemfactory/provider:0.15.2
+    image: golemfactory/provider:0.16.0-rc2
     network_mode: "host"
     privileged: true
     command: [ "golemsp", "run", "--no-interactive" ]
@@ -591,6 +614,7 @@ services:
       - /root/.local/share/yagna
     environment:
       NODE_NAME: "testnet-c1-23"
+      YA_NET_PUB_BROADCAST_SIZE: 150
       YA_PAYMENT_NETWORK_GROUP: testnet
       YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
       YA_NET_BIND_URL: udp://0.0.0.0:11523
@@ -600,7 +624,7 @@ services:
       YA_RT_MEM: 4.5
       SUBNET: public
   provider24:
-    image: golemfactory/provider:0.15.2
+    image: golemfactory/provider:0.16.0-rc2
     network_mode: "host"
     privileged: true
     command: [ "golemsp", "run", "--no-interactive" ]
@@ -616,6 +640,7 @@ services:
       - /root/.local/share/yagna
     environment:
       NODE_NAME: "testnet-c1-24"
+      YA_NET_PUB_BROADCAST_SIZE: 150
       YA_PAYMENT_NETWORK_GROUP: testnet
       YA_ACCOUNT: "0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
       YA_NET_BIND_URL: udp://0.0.0.0:11524

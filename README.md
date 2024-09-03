@@ -17,6 +17,16 @@ This Python script is designed to generate a Docker Compose file (`docker-compos
 - `subnet`: The subnet to be used. Default is "public".
 - `version`: The version of the service to deploy. Default is "0.15.2".
 
+### comp.py
+
+Use this script as "post installation" for new bare metals / instances.|
+You can edit those values :
+instances=3
+subnet="public"
+version="0.16.0-rc4"
+memory="2G"
+cpus="1.0"
+
 #### Usage
 
 To use the `comp.py` script, you need to have Python installed. You can run the script with command : 

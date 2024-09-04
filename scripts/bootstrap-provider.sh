@@ -1,8 +1,6 @@
 #! /bin/bash
 
 cd /home/ubuntu
-git clone https://github.com/golemfactory/devops-testnet-deployment.git
-cd /home/ubuntu/devops-testnet-deployment
 sudo apt-get update
 sudo apt-get upgrade -y
 
@@ -21,7 +19,11 @@ echo \
 sudo apt-get update
 
 # Install dependancies :
-sudo apt install python3 python-is-python3 mc -y
+sudo apt install python3 python-is-python3 mc git -y
+
+# Clone repo
+git clone https://github.com/golemfactory/devops-testnet-deployment.git
+cd /home/ubuntu/devops-testnet-deployment
 
 # Install the latest Docker version :
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y

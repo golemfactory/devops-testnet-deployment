@@ -1,6 +1,8 @@
 #! /bin/bash
 
 cd /home/ubuntu
+git clone https://github.com/golemfactory/devops-testnet-deployment.git
+cd /home/ubuntu/devops-testnet-deployment
 sudo apt-get update
 sudo apt-get upgrade -y
 

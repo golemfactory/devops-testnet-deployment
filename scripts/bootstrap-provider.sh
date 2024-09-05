@@ -68,7 +68,9 @@ def service(idx):
       YAGNA_API_URL: http://127.0.0.1:{api_port}
       AUTO_CLEANUP_ACTIVITY: true
       AUTO_CLEANUP_AGREEMENT: true
-      YA_RT_MEM: 4.5
+      YA_RT_MEM: 4
+      YA_RT_CORES: 4
+      YA_RT_STORAGE: 20
       SUBNET: {subnet}
 '''
 

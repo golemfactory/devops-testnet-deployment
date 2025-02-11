@@ -1,0 +1,100 @@
+- name: Deploy Golem Service Provider
+  hosts: all
+  become: yes
+  tasks:
+    - name: Add ubuntu user to kvm group
+      user:
+        name: ubuntu
+        groups: kvm
+        append: yes
+
+    - name: Upgrade and update system
+      apt:
+        update_cache: yes
+        upgrade: yes
+
+    - name: Ensure required packages are installed
+      apt:
+        update_cache: yes
+        name:
+          - curl
+          - mc
+          - git
+
+    - name: Ensure PATH is set permanently for ubuntu
+      lineinfile:
+        path: /home/ubuntu/.bashrc
+        line: 'export PATH="/home/ubuntu/.local/bin:$PATH"'
+
+    - name: Install Golem Provider as ubuntu
+      become: no
+      shell: |
+        export PATH="/home/ubuntu/.local/bin:$PATH"
+        export BATCH_MODE=yes
+        export GOLEM_ACCEPT_TOS=yes
+        curl -fsSL https://join.golem.network/as-provider | bash
+      args:
+        executable: /bin/bash
+
+    - name: Ensure Golem provider data directory exists
+      file:
+        path: /home/ubuntu/.local/share/ya-provider
+        state: directory
+        owner: ubuntu
+        group: ubuntu
+
+    - name: Create systemd service for Golem
+      copy:
+        dest: /etc/systemd/system/golemsp.service
+        content: |
+          [Unit]
+          Description=Golem Service Provider
+          After=network.target
+
+          [Service]
+          User=ubuntu
+          Environment="YA_ACCOUNT=0x206bfe4F439a83b65A5B9c2C3B1cc6cB49054cc4"
+          Environment="YA_NET_RELAY_HOST=ya-satori.dev.golem.network:7477"
+          Environment="AUTO_CLEANUP_ACTIVITY=true"
+          Environment="AUTO_CLEANUP_AGREEMENT=true"
+          Environment="YA_RT_MEM=16"
+          Environment="YA_RT_CORES=4"
+          Environment="YA_RT_STORAGE=100"
+          Environment="YA_NET_PUB_BROADCAST_SIZE=150"
+          Environment="PATH=/home/ubuntu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+          ExecStart=/home/ubuntu/.local/bin/golemsp run --no-interactive
+          Restart=always
+          RestartSec=10
+          LimitNOFILE=65535
+
+          [Install]
+          WantedBy=multi-user.target
+
+          Environment="YA_RT_STORAGE=100"
+          Environment="YA_NET_PUB_BROADCAST_SIZE=150"
+          Environment="PATH=/home/ubuntu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+          ExecStart=/home/ubuntu/.local/bin/golemsp run --no-interactive
+          Restart=always
+          RestartSec=10
+          LimitNOFILE=65535
+
+          [Install]
+          WantedBy=multi-user.target
+
+    - name: Reload systemd and enable Golem service
+      systemd:
+        daemon_reload: yes
+        name: golemsp
+        enabled: yes
+        state: started
+
+    - name: Set Golem pricing settings
+      become: no
+      shell: |
+        /home/ubuntu/.local/bin/golemsp settings set --starting-fee 0
+        /home/ubuntu/.local/bin/golemsp settings set --env-per-hour 0
+        /home/ubuntu/.local/bin/golemsp settings set --cpu-per-hour 0
+        /home/ubuntu/.local/bin/golemsp settings set --cores 8
+        /home/ubuntu/.local/bin/golemsp settings set --memory 16GiB
+      args:
+        executable: /bin/bash

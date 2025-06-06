@@ -1,3 +1,4 @@
 #!/bin/sh
 yagna service run &
-crond -f -d 8
+/usr/src/app/repeat_script.sh &
+wait

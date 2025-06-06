@@ -33,7 +33,8 @@ RUN touch /var/log/cron.log
 # Create a script to run yagna and cron
 COPY entrypoint.sh /entrypoint.sh
 RUN dos2unix /entrypoint.sh && \
-    chmod +x /entrypoint.sh
+    chmod +x /entrypoint.sh && \
+    chmod +x /usr/src/app/repeat_script.sh
 
 # Run the entrypoint script
 ENTRYPOINT ["/entrypoint.sh"]

@@ -69,7 +69,6 @@ async def main(
 
             script.run("/golem/entrypoints/run-blender.sh")
             output_file = f"output_{frame}.png"
-            script.download_file(f"/golem/output/out{frame:04d}.png", output_file)
             try:
                 yield script
                 # TODO: Check if job results are valid

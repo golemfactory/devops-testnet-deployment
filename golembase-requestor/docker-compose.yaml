@@ -1,0 +1,11 @@
+services:
+  requestor:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - yagna-data:/root/.local/share/yagna
+    restart: unless-stopped
+
+volumes:
+  yagna-data:

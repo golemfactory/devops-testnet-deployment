@@ -4,8 +4,14 @@ FROM python:3.10-alpine
 # Set environment variables
 ENV PYTHONUNBUFFERED 1
 
-# Install cron
-RUN apk add --no-cache dcron dos2unix
+# Install cron and poetry dependencies
+RUN apk add --no-cache dcron dos2unix curl
+
+# Install Poetry
+RUN curl -sSL https://install.python-poetry.org | python3 -
+
+# Add Poetry to PATH
+ENV PATH="/root/.local/bin:$PATH"
 
 # Set the working directory in the container
 WORKDIR /usr/src/app
@@ -16,11 +22,15 @@ COPY ./yagna-builds /usr/local/bin
 # Set Path
 ENV PATH="/usr/local/bin:${PATH}"
 
+# Copy poetry configuration files
+COPY pyproject.toml poetry.lock* ./
+
+# Install dependencies using Poetry
+RUN poetry config virtualenvs.create false && \
+    poetry install --no-dev --no-interaction --no-ansi
+
 # Copy the current directory contents into the container at /usr/src/app
 COPY . .
-
-# Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
 
 # Add crontab file
 COPY crontab /etc/cron.d/golem-cron
